@@ -37,8 +37,9 @@ class MyUserManager(BaseUserManager):
 
 class MyUser(AbstractBaseUser):
     
-    """ A custom user model that uses email instead of username for authentication."""
-    email = models.EmailField(   
+    """  A custom user model that uses email instead of username for authentication."""
+    
+    email = models.EmailField(
         verbose_name="آدرس ایمیل",
         max_length=255,
         unique=True,
@@ -49,8 +50,10 @@ class MyUser(AbstractBaseUser):
 
     objects = MyUserManager()
 
+    
+    
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ["date_of_birth"]
 
     def __str__(self):
         return self.email

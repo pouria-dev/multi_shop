@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
-    'accounts.apps.AccountsConfig',
+    'accounts',
     
 ]
 
@@ -136,4 +136,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "accounts.MyUser"
+AUTH_USER_MODEL = 'accounts.MyUser'
