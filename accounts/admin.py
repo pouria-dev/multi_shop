@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 from .models import MyUser
 
 
-class UserCreationForm(forms.ModelForm):
+class UserCreationForm(forms.ModelForm): 
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
 
